@@ -135,8 +135,7 @@ export default function Home({
         >
           <span className={"text-gray-100 text-sm"}>Vishwa Vignesh</span>
           <div className={"text-gray-300 text-xs flex space-x-1 items-center"}>
-            <p>3 Files</p>
-            <ChevronDown className={"w-3 h-3"} />
+            {transaction_id}
           </div>
         </div>
         <div
