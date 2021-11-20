@@ -8,6 +8,7 @@ import RippleButton from "../../../components/ripple-button";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ExclaimationTriangleSolid from "../../../public/assets/exclamation-triangle-solid.svg";
+import { confirmUHIPin } from "../../../utils/app-bridges";
 
 const arrayToBeRendered = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -104,6 +105,7 @@ export default function Home({
 
     if (response.success) {
       //call bridge
+      confirmUHIPin(true);
     } else {
       setError(response.message);
     }
